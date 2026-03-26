@@ -1,50 +1,58 @@
 AMX NetLinx NI-Series Legacy Support
 Revitalizing NI-2100, NI-3100, and NI-4100 Systems
-
 🚀 Introduction
 In the modern AV landscape, high-quality documentation for "legacy" hardware often disappears into broken forum links and lost PDFs. This repository is a dedicated resource for the AMX NI-Series (NI-2100, NI-3100, NI-4100).
 
-Whether you are a hobbyist keeping a home system alive or a pro-integrator maintaining a commercial stack, this project provides the essential boilerplate code, firmware configuration steps, and troubleshooting guides needed to get these masters operational in a modern network environment.
+There is a massive lack of accessible, clear information for these workhorse masters. This project exists to provide a central "brain trust" for passionate automation folks to get these systems back online, fully functional, and integrated into modern environments.
+
+💻 Software Requirements
+To use the files in this repository, you will need:
+
+NetLinx Studio (v4.x Recommended): The primary IDE for compiling and transferring code.
+
+NSH (NetLinx Shell): For terminal-based diagnostics.
+
+Firmware Transfer Tool: To utilize the included .kit files.
 
 📂 File List (v0.1)
-/Boilerplate: Standard .axs templates for NI-series masters.
+Master_Files/: Contains the main .axs source files for system logic.
 
-/Includes: Essential .axi files for common serial/IP communication.
+Device_Files/: Includes specific device drivers and communication modules (.axi).
 
-/Docs: Markdown guides for Serial-to-Ethernet setup and DIP switch configurations.
+Firmware/: Includes the vital .kit files for NI-Series master firmware updates and card-slot expansion fixes.
 
-LICENSE: The MIT license file ensuring author attribution.
+Workspaces/: Pre-configured .apw files to get your environment set up instantly.
 
-NI_Series_Base_Program.axs: The core workspace file.
+Docs/: Manuals and DIP switch charts for the 2100, 3100, and 4100.
 
-🛠 Setup & Compatibility
-This code is designed for the NI-Series architecture.
-
-Note: Ensure your NetLinx Studio version is updated to at least v4.x to handle modern compiler nuances, even when targeting older hardware.
-
+🛠 Hardware Compatibility
 NI-2100: 3 Configurable RS-232/422/485 ports, 4 IR, 4 I/O, 4 Relays.
 
 NI-3100: 7 Configurable RS-232/422/485 ports, 8 IR, 8 I/O, 8 Relays.
 
-NI-4100: Expanded card-slot architecture with 7 RS-232 ports + expansion.
+NI-4100: The flagship card-slot architecture with 7 RS-232 ports + expansion slots.
 
 📝 Change Log
 [v0.1] - 2026-03-26 (The "Base" Release)
-Initial Commit: Repository structure created.
+Initial Commit: Repository structure established.
 
-Documentation: Added hardware pinout guide for NI-series DB9 ports.
+Assets: Added baseline .kit firmware files for NI-series stability.
 
-Base Code: Uploaded a "Heartbeat" logic template to verify master-to-touchpanel communication.
+Workspace: Uploaded initial Master and Device file templates.
+
+Software Guide: Added prerequisites for NetLinx Studio versioning.
 
 [Upcoming v1.0] - Planned
-Full implementation of a "Working Code Set."
+The "Initial Working Set": A fully compiled, error-free baseline program.
 
-Standardized IP communication module for modern TCP/UDP integration.
+IP Communication: Standardized modules for modern TCP/UDP control.
 
-Auto-reconnect logic for peripheral devices.
+Troubleshooting: A "Common Faults" wiki for NI-series hardware.
 
 ⚖️ License
-Distributed under the MIT License. This means you are free to use, modify, and distribute this code as long as the original copyright and license notice are included. Credit to the original contributors is required.
+Distributed under the MIT License.
+
+Important: This license requires that you keep the original copyright notice and give credit to the authors. If this code helps you finish a project or save a legacy system, please keep the attribution intact!
 
 👋 Contributing
-If you have a .axi file that has saved your life in the field, or a specific trick for getting an NI-4100 to behave on a modern VLAN, please submit a Pull Request!
+Help us fill the information gap! If you have stable modules, unique .kit files, or specific NI-4100 configuration tips, please submit a Pull Request.
