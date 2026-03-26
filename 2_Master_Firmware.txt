@@ -1,0 +1,36 @@
+STEP 2: FIRMWARE UPDATE (NI-SERIES)
+===============================================================================
+MANDATORY: Your NI-Master must be running a modern firmware version to 
+support current IP communication and NetLinx Studio 4 features.
+
+REQUIRED FILE: 2_Firmware.kit (Included in this directory)
+
+---
+INSTRUCTIONS FOR UPDATING VIA NETLINX STUDIO 4:
+---
+
+1. CONNECT TO THE MASTER:
+   - Use the "Program" port (Serial) or a known IP address.
+   - In NetLinx Studio, go to: Settings > Workspace Communications Settings.
+   - Verify that 'Online Tree' shows your Master (Device 0).
+
+2. OPEN FIRMWARE TRANSFER:
+   - Go to: Tools > Firmware Transfer > Send to NetLinx Device.
+
+3. SELECT THE .KIT FILE:
+   - Click 'Add' and navigate to the "2_Firmware.kit" file in this repo.
+   - Ensure the Target is set to: System 1, Device 0 (The Master).
+
+4. EXECUTE THE TRANSFER:
+   - Click 'Send'. 
+   - CRITICAL: Do NOT power off the unit during this process. 
+   - The Master will reboot automatically. This may take 3-5 minutes.
+
+5. VERIFICATION:
+   - Once the "Online" LED stays solid, open the Terminal (NSH).
+   - Type: 'show platform' or 'ver'.
+   - Confirm the version matches the .kit file details.
+
+If the Master reboots and you can see it in the Online Tree, move to 
+file: 3_Device_Software.txt.
+===============================================================================
