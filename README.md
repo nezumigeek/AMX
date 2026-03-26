@@ -11,7 +11,7 @@ Follow these files in numerical order to ensure a successful deployment:
 
 1_Software.txt * Mandatory. Details on acquiring and installing NetLinx Studio and the necessary compiler versions.
 
-2_Firmware.kit * Mandatory. The specific firmware kit required to bring the NI-Series Master up to a stable, modern communication standard.
+2_Firmware.txt * Mandatory. The specific firmware required to bring the NI-Series Master up to a stable, modern communication standard.
 
 3_Device_Software.txt * Mandatory. Guidance on defining and mapping the Device IDs (D:P:S) for the NI-2100/3100/4100 onboard ports.
 
