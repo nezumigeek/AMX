@@ -1,5 +1,6 @@
 AMX NetLinx NI-Series Legacy Support
 Revitalizing NI-2100, NI-3100, and NI-4100 Systems
+
 🚀 Introduction
 In the modern AV landscape, high-quality documentation for "legacy" hardware often disappears into broken forum links and lost PDFs. This repository is a dedicated resource for the AMX NI-Series (NI-2100, NI-3100, NI-4100).
 
