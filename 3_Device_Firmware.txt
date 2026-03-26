@@ -1,1 +1,33 @@
+STEP 3: DEVICE FIRMWARE (SUB-DEVICES & CARDS)
+===============================================================================
+MANDATORY: Updating the Master (.kit) is only half the battle. You must also 
+ensure the internal devices and physical expansion cards are updated.
 
+REQUIRED FILES: 
+- Look for .kit files specifically labeled for "Internal Devices" or 
+  specific cards (e.g., NXC-COM2, NXC-REL8).
+
+---
+INSTRUCTIONS:
+---
+
+1. IDENTIFY SUB-DEVICES:
+   - In NetLinx Studio, look at your 'Online Tree'.
+   - You will see Device 0 (Master), but also Device 5001 (Onboard Ports).
+   - If you have an NI-4100 with cards, you will see 5002, 5003, etc.
+
+2. THE "DEVICE" TRANSFER:
+   - Go to: Tools > Firmware Transfer > Send to NetLinx Device.
+   - Click 'Add' and select your Device .kit file.
+   - TARGETING IS DIFFERENT HERE: 
+     Instead of targeting Device 0, you must target the specific Device 
+     number shown in your Online Tree (usually 5001 for onboard I/O).
+
+3. WHY THIS MATTERS:
+   - Without this, the Master might be running v4.x firmware while the 
+     serial ports are still trying to communicate using code from 2008. 
+     This leads to "Device Offline" toggling and buffer overruns.
+
+Once the "Output" window in Studio confirms "Transfer Complete" for 
+each device, proceed to: 4_Device_Mapping.txt.
+===============================================================================
