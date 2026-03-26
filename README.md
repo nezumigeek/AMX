@@ -1,59 +1,46 @@
 AMX NetLinx NI-Series Legacy Support
 Revitalizing NI-2100, NI-3100, and NI-4100 Systems
-
 🚀 Introduction
-In the modern AV landscape, high-quality documentation for "legacy" hardware often disappears into broken forum links and lost PDFs. This repository is a dedicated resource for the AMX NI-Series (NI-2100, NI-3100, NI-4100).
+There is a massive lack of accessible, clear information for these workhorse masters. This project provides a central "brain trust" and a structured path to get these systems operational.
 
-There is a massive lack of accessible, clear information for these workhorse masters. This project exists to provide a central "brain trust" for passionate automation folks to get these systems back online, fully functional, and integrated into modern environments.
+Note on Numbering: Files prepended with a number (e.g., 1_...) are mandatory. You must complete or possess these files in order to have a functioning system. Unnumbered files are optional resources.
 
-💻 Software Requirements
-To use the files in this repository, you will need:
+📂 Project Structure & Dependencies
+Follow these files in numerical order to ensure a successful deployment:
 
-NetLinx Studio (v4.x Recommended): The primary IDE for compiling and transferring code.
+1_Software.txt * Mandatory. Details on acquiring and installing NetLinx Studio and the necessary compiler versions.
 
-NSH (NetLinx Shell): For terminal-based diagnostics.
+2_Firmware.kit * Mandatory. The specific firmware kit required to bring the NI-Series Master up to a stable, modern communication standard.
 
-Firmware Transfer Tool: To utilize the included .kit files.
+3_Device_Software.txt * Mandatory. Guidance on defining and mapping the Device IDs (D:P:S) for the NI-2100/3100/4100 onboard ports.
 
-📂 File List (v0.1)
-Master_Files/: Contains the main .axs source files for system logic.
+Master_Files/ * Mandatory. The .axs source code that acts as the brain of your system.
 
-Device_Files/: Includes specific device drivers and communication modules (.axi).
+Device_Files/ * Optional. Supplemental modules (.axi) for specific 3rd party equipment.
 
-Firmware/: Includes the vital .kit files for NI-Series master firmware updates and card-slot expansion fixes.
-
-Workspaces/: Pre-configured .apw files to get your environment set up instantly.
-
-Docs/: Manuals and DIP switch charts for the 2100, 3100, and 4100.
+Docs/ * Reference manuals, DIP switch charts, and wiring pinouts.
 
 🛠 Hardware Compatibility
-NI-2100: 3 Configurable RS-232/422/485 ports, 4 IR, 4 I/O, 4 Relays.
+NI-2100: 3 RS-232/422/485 ports, 4 IR, 4 I/O, 4 Relays.
 
-NI-3100: 7 Configurable RS-232/422/485 ports, 8 IR, 8 I/O, 8 Relays.
+NI-3100: 7 RS-232/422/485 ports, 8 IR, 8 I/O, 8 Relays.
 
-NI-4100: The flagship card-slot architecture with 7 RS-232 ports + expansion slots.
+NI-4100: Card-slot architecture with 7 onboard RS-232 ports + expansion capabilities.
 
 📝 Change Log
 [v0.1] - 2026-03-26 (The "Base" Release)
-Initial Commit: Repository structure established.
+Structure: Implemented the numbered mandatory file system.
 
-Assets: Added baseline .kit firmware files for NI-series stability.
+Initial Setup: Added 1_Software.txt and placeholders for 2_Firmware.kit.
 
-Workspace: Uploaded initial Master and Device file templates.
-
-Software Guide: Added prerequisites for NetLinx Studio versioning.
+Base Logic: Established the 3_Device_Software.txt framework for port mapping.
 
 [Upcoming v1.0] - Planned
 The "Initial Working Set": A fully compiled, error-free baseline program.
 
-IP Communication: Standardized modules for modern TCP/UDP control.
-
-Troubleshooting: A "Common Faults" wiki for NI-series hardware.
+Auto-Config: Scripts to automate the initial Master connection via USB/Serial.
 
 ⚖️ License
 Distributed under the MIT License.
 
-Important: This license requires that you keep the original copyright notice and give credit to the authors. If this code helps you finish a project or save a legacy system, please keep the attribution intact!
-
-👋 Contributing
-Help us fill the information gap! If you have stable modules, unique .kit files, or specific NI-4100 configuration tips, please submit a Pull Request.
+Attribution Required: You are free to use and modify this, but you must retain the original copyright notice and give credit to this repository.
