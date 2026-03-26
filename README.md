@@ -41,6 +41,24 @@ The "Initial Working Set": A fully compiled, error-free baseline program.
 
 Auto-Config: Scripts to automate the initial Master connection via USB/Serial.
 
+## 🏆 Credits & Contributors
+
+This repository was created and is maintained by *Nezumigeek*.
+
+I would love links to a community of automation engineers and "old-school" AV programmers who keep the legacy of reliable, local-control hardware alive. If you assist in helping write code or documents for this repository I would be happy to list your contribution(s).
+
+**Want to be listed here?** Submit a Pull Request with a significant code contribution or a verified `.kit` firmware fix for the NI-series card slots!
+
+---
+
+## ⚖️ License
+
+Distributed under the **MIT License**.
+
+> **Note on Attribution:** Under the MIT license, you are free to use this code in commercial and private projects. However, the original copyright notice and this permission notice must be included in all copies or substantial portions of the software. 
+> 
+> If this repository helped you save a project, a "Star" on GitHub and a shout-out in your code comments is greatly appreciated.
+
 ⚖️ License
 Distributed under the MIT License.
 
