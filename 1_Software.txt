@@ -1,0 +1,27 @@
+STEP 1: DEVELOPMENT SOFTWARE
+===============================================================================
+MANDATORY: You cannot program, compile, or transfer to an NI-Series master 
+without the following suite.
+
+1. REQUIRED IDE: NetLinx Studio 4 (v4.4.1915 or later recommended)
+   - Why: Earlier versions of Studio 3 or early v4 builds may struggle with 
+     modern Windows OS permissions and the latest NI firmware (.kit) files.
+   - Download: Available via the HARMAN Pro / AMX resources portal.
+
+2. COMPILER: 
+   - Ensure the NetLinx Compiler (v4.x) is active in your Workspace 
+     Preferences. The NI-Series requires the standard NetLinx compiler, 
+     though these units are "Duet Compatible" (Java-based), this repo 
+     focuses on standard NetLinx (.axs) logic.
+
+3. USB-TO-SERIAL DRIVERS:
+   - If connecting via the front "PROGRAM" port, ensure you have a stable 
+     Prolific or FTDI driver installed for your DB9-to-USB adapter.
+   - Default Port Settings: 38400, N, 8, 1.
+
+Once NetLinx Studio 4 is installed and if you can successfully 'Blink' the 
+LEDs via the Terminal (NSH), proceed to file: 2_Firmware.txt.
+===============================================================================
+
+Troubleshooting:
+Cannot connect to Master - 
