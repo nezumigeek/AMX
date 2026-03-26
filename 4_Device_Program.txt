@@ -1,0 +1,46 @@
+STEP 3: DEVICE ID & PORT MAPPING (D:P:S)
+===============================================================================
+MANDATORY: In NetLinx, you must define your hardware addresses (Device:Port:System).
+For the NI-Series, the Master is always System 1.
+
+---
+NI-4100 PHYSICAL PORT MAP:
+---
+The NI-4100 is unique because it uses integrated ports AND card slots. 
+
+1. ONBOARD RS-232/422/485 PORTS:
+   - Port 1: dvRS232_1 = 5001:1:0
+   - Port 2: dvRS232_2 = 5001:2:0
+   - Port 3: dvRS232_3 = 5001:3:0
+   - Port 4: dvRS232_4 = 5001:4:0
+   - Port 5: dvRS232_5 = 5001:5:0
+   - Port 6: dvRS232_6 = 5001:6:0
+   - Port 7: dvRS232_7 = 5001:7:0
+
+2. ONBOARD CONTROL PORTS:
+   - IR / Serial: dvIR = 5001:8:0  (Ports 1-8 are addressable here)
+   - I/O: dvIO = 5001:9:0          (8 Channels)
+   - Relays: dvRelays = 5001:10:0  (8 Channels)
+
+3. EXPANSION CARD SLOTS (The "NI-4100 Special"):
+   - Slot 1: Usually starts at Device 5002
+   - Slot 2: Usually starts at Device 5003
+   - Slot 3: Usually starts at Device 5004
+   - Slot 4: Usually starts at Device 5005
+   
+   NOTE: If you have an NXC-COM2 card in Slot 1, your code address 
+   will be 5002:1:0 and 5002:2:0.
+
+---
+HOW TO DEFINE IN YOUR .AXS FILE:
+---
+Define these at the very top of your Main Program under 'DEFINE_DEVICE':
+
+DEFINE_DEVICE
+dvMaster   = 0:1:0    // The Master Controller itself
+dvRS232_1  = 5001:1:0 // Physical Port 1 on the back
+dvPanel    = 10001:1:0 // Standard Touch Panel address
+
+Once your D:P:S addresses match your physical wiring, you are ready to 
+write logic in: Master_Files/
+===============================================================================
