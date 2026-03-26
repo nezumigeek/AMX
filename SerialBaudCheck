@@ -1,0 +1,17 @@
+$bauds = @(9600, 19200, 38400, 57600, 115200)
+foreach ($b in $bauds) {
+    $port = New-Object System.IO.Ports.SerialPort("COM4", $b, "None", 8, "One")
+    $port.ReadTimeout = 1000
+    try {
+        $port.Open()
+        $port.Write("`r")
+        Start-Sleep -Milliseconds 300
+        $res = $port.ReadExisting()
+        if ($res) {
+            Write-Host "Success at $b baud! Response: $res" -ForegroundColor Green
+            $port.Close(); break
+        } else {
+            Write-Host "No luck at $b..." -ForegroundColor Gray
+        }
+    } catch { } finally { $port.Close() }
+}
